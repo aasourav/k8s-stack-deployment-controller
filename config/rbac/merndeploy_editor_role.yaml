@@ -1,0 +1,27 @@
+# permissions for end users to edit merndeploys.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: test-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: merndeploy-editor-role
+rules:
+- apiGroups:
+  - stackdeployments.sandtech.io
+  resources:
+  - merndeploys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - stackdeployments.sandtech.io
+  resources:
+  - merndeploys/status
+  verbs:
+  - get

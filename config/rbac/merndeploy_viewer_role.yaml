@@ -1,0 +1,23 @@
+# permissions for end users to view merndeploys.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: test-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: merndeploy-viewer-role
+rules:
+- apiGroups:
+  - stackdeployments.sandtech.io
+  resources:
+  - merndeploys
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - stackdeployments.sandtech.io
+  resources:
+  - merndeploys/status
+  verbs:
+  - get

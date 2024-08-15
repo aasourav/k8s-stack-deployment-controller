@@ -1,0 +1,9 @@
+apiVersion: stackdeployments.sandtech.io/v1
+kind: MernDeploy
+metadata:
+  labels:
+    app.kubernetes.io/name: test-crd
+    app.kubernetes.io/managed-by: kustomize
+  name: merndeploy-sample
+spec:
+  # TODO(user): Add fields here

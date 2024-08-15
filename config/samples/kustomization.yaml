@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- stackdeployments_v1_merndeploy.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
