@@ -31,6 +31,8 @@ type MernDeploySpec struct {
 	// Foo is an example field of MernDeploy. Edit merndeploy_types.go to remove/update
 	FrontendImage string `json:"frontendImage"`
 	FrontendReplicas string `json:"frontendReplicas,omitempty"`
+	FrontendPort int32 `json:"frontendPort"`
+	BackendPort int32 `json:"backendPort"`
 	BackendImage string `json:"backendImage,omitempty"`
 	BackendReplicas string `json:"backendReplicas,omitempty"`
 }

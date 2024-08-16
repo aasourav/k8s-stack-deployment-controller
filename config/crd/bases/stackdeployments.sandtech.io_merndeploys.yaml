@@ -41,16 +41,22 @@ spec:
             properties:
               backendImage:
                 type: string
+              backendPort:
+                type: string
               backendReplicas:
                 type: string
               frontendImage:
                 description: Foo is an example field of MernDeploy. Edit merndeploy_types.go
                   to remove/update
                 type: string
+              frontendPort:
+                type: string
               frontendReplicas:
                 type: string
             required:
+            - backendPort
             - frontendImage
+            - frontendPort
             type: object
           status:
             description: MernDeployStatus defines the observed state of MernDeploy
